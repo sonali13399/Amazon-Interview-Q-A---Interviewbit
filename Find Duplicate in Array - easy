@@ -1,0 +1,15 @@
+//https://www.interviewbit.com/problems/find-duplicate-in-array/
+
+public class Solution {
+    // DO NOT MODIFY THE LIST. IT IS READ ONLY
+    public int repeatedNumber(final List<Integer> A) {
+        int n = A.size();
+    int result =A.get(0);
+    for(int i=1; i<n; i++){
+        result = result^A.get(i);
+        result = result^i;
+    }
+    return result;
+    }
+}
+
